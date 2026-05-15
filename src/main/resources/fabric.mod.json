@@ -5,7 +5,7 @@
   "name": "HotProperties",
   "description": "Dynamically reload server.properties without restarting!",
   "authors": [
-    "derfa"
+    "Fayber"
   ],
   "contact": {},
   "license": "GPL-3.0-or-later",
