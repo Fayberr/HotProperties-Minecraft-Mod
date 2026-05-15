@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "hotproperties",
+  "version": "${version}",
+  "name": "HotProperties",
+  "description": "Dynamically reload server.properties without restarting!",
+  "authors": [
+    "derfa"
+  ],
+  "contact": {},
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/hotproperties/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "server": [
+      "com.hotproperties.HotProperties"
+    ]
+  },
+  "mixins": [
+    "hotproperties.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
