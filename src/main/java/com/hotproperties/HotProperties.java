@@ -15,7 +15,7 @@ public class HotProperties implements DedicatedServerModInitializer {
     public void onInitializeServer() {
         LOGGER.info("Initializing HotProperties...");
         
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+        CommandRegistrationCallback.EVENT.register((dispatcher, buildContext, environment) -> {
             HotPropertiesCommand.register(dispatcher);
         });
     }

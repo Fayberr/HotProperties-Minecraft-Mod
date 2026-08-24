@@ -6,7 +6,8 @@ restarts.
 
 ## Commands
 
-All commands require operator level 4. `/hotproperties` is an alias for `/hp`.
+All commands require operator level 4 (owner permission). `/hotproperties` is an alias
+for `/hp`.
 
 | Command | Effect |
 | --- | --- |
@@ -18,12 +19,14 @@ All commands require operator level 4. `/hotproperties` is an alias for `/hp`.
 | `/hp spawn-protection <radius>` | Set spawn protection radius. `0` disables it. Dedicated servers only. |
 | `/hp command-blocks <true/false>` | Enable or disable command blocks. Dedicated servers only. |
 
-View distance, simulation distance, MOTD and idle timeout apply immediately through
-the server API. Spawn protection and command blocks take effect through mixins.
+Everything is applied through native server APIs: view distance and simulation distance
+cascade to players and chunk sources, spawn protection uses the dedicated server setter,
+and command blocks are toggled via the `command_blocks_work` game rule. No mixins are
+used.
 
 ## Building
 
-JDK 21 and a Fabric 1.21.10 development environment.
+JDK 25 and a Fabric 26.1.2 development environment.
 
 ```bash
 ./gradlew build
